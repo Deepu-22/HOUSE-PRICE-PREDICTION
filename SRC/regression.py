@@ -30,8 +30,8 @@ model1=LinearRegression()
 X1=data[['Area','Bedrooms','Bathrooms']]
 Y1=data[['Price']]
 X1_train,X1_test,Y1_train,Y1_test=train_test_split(X1,Y1,test_size=0.2,random_state=42)
-model.fit(X1_train,Y1_train)
-Y1_pred=model.predict(X1_test)
+model1.fit(X1_train,Y1_train)
+Y1_pred=model1.predict(X1_test)
 print(np.round(Y1_pred,2))
 mse=mean_squared_error(Y1_test,Y1_pred)
 print("Mean Squared Error:",mse)
